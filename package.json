@@ -5,12 +5,12 @@
     "type": "module",
     "main": "main.cjs",
     "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "lint": "eslint .",
-        "preview": "vite preview",
-        "start": "electron .",
-        "package": "npm run build && electron ."
+        "react:dev": "vite",
+        "react:build": "vite build",
+        "react:lint": "eslint .",
+        "react:preview": "vite preview",
+        "electron:dev": "electron .",
+        "electron:build": "npm run react:build && electron-builder"
     },
     "dependencies": {
         "react": "^18.3.1",
@@ -23,6 +23,7 @@
         "@vitejs/plugin-react": "^4.3.3",
         "autoprefixer": "^10.4.20",
         "electron": "^33.2.0",
+        "electron-builder": "^25.1.8",
         "eslint": "^9.13.0",
         "eslint-plugin-react": "^7.37.2",
         "eslint-plugin-react-hooks": "^5.0.0",
@@ -31,5 +32,16 @@
         "postcss": "^8.4.49",
         "tailwindcss": "^3.4.15",
         "vite": "^5.4.10"
+    },
+    "build": {
+        "appId": "com.example.yourapp",
+        "files": [
+            "dist/**/*",
+            "main.js",
+            "preload.js"
+        ],
+        "directories": {
+            "output": "release"
+        }
     }
 }
