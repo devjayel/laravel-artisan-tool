@@ -4,6 +4,7 @@
     "version": "0.0.0",
     "type": "module",
     "main": "main.cjs",
+    "homepage": "./",
     "scripts": {
         "react:dev": "vite",
         "react:build": "vite build",
@@ -37,7 +38,7 @@
         "appId": "com.example.yourapp",
         "files": [
             "dist/**/*",
-            "main.js",
+            "main.cjs",
             "preload.js"
         ],
         "directories": {
