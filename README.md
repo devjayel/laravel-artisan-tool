@@ -1,8 +1,43 @@
-# React + Vite
+# Template for Electron React Vite Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+This is a template for an Electron React Vite Tailwind CSS application.
 
-Currently, two official plugins are available:
+## Features
+- React
+- Vite
+- Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Clone
+
+```bash
+git clone https://github.com/devjayel/electron-vite-react-tailwind
+```
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/en/)
+
+## Installation
+
+- Install dependencies.
+
+```bash
+npm i
+```
+
+**Serve App:**
+
+```bash
+npm run react:dev
+```
+
+```bash
+npm run electron:dev
+```
+
+**Build App:**
+
+```bash
+npm run electron:build
+```
