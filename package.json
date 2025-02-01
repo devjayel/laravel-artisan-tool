@@ -47,7 +47,7 @@
             "database.json"
         ],
         "directories": {
-            "output": "release/v5",
+            "output": "release/v1",
             "buildResources": "assets"
         },
         "productName": "Laravel Artisan Tool",
