@@ -1,11 +1,21 @@
+import { useEffect, useState } from 'react';
+import Home from "@/Pages/Home";
+
 function App() {
-  return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-3xl font-bold text-blue-500">
-        React + Vite + Tailwind + Electron!
-      </h1>
-    </div>
-  );
+  const [artisanCommand, setArtisanCommand] = useState([]);
+
+  useEffect(() => {
+    window.electron.ipcRenderer.on('data-response', (event, data) => {
+      setArtisanCommand(data);
+      console.log(data);
+    });
+
+    window.electron.ipcRenderer.send('get-all');
+  }, []);
+
+
+
+  return <Home artisanCommand={artisanCommand} />;
 }
 
 export default App;

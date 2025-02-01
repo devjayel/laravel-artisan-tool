@@ -1,5 +1,6 @@
 {
     "name": "laravel-artisan-tool",
+    "author": "JL Romero Juanitas (https://github.com/devjayel) (fuxdevs)",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -15,7 +16,9 @@
     },
     "dependencies": {
         "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^7.0.1",
+        "react-toastify": "^10.0.6"
     },
     "devDependencies": {
         "@eslint/js": "^9.13.0",
@@ -36,14 +39,20 @@
     },
     "build": {
         "appId": "com.fuxdevs.laravelartisantool",
-        "author": "JL Romero Juanitas (FuxDevs)",
         "files": [
             "dist/**/*",
             "main.cjs",
-            "preload.js"
+            "preload.cjs",
+            "assets/favicon.ico",
+            "database.json"
         ],
         "directories": {
-            "output": "release"
+            "output": "release/v5",
+            "buildResources": "assets"
+        },
+        "productName": "Laravel Artisan Tool",
+        "win": {
+            "icon": "assets/favicon.ico"
         }
     }
 }

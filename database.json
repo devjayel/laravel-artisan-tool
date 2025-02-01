@@ -1,0 +1,311 @@
+[
+    {
+        "name": "make",
+        "commands": [
+            {
+                "name": "make:controller",
+                "description": "Generate a new controller class.",
+                "suffix": "Controller",
+                "needs_value": true,
+                "flags": [
+                    {
+                        "command": "--resource",
+                        "needs_value": false,
+                        "description": "Create a resource controller with predefined methods."
+                    },
+                    {
+                        "command": "--model",
+                        "needs_value": true,
+                        "description": "Name of the model to associate with this controller."
+                    },
+                    {
+                        "command": "--api",
+                        "needs_value": false,
+                        "description": "Create an API controller without view-related methods."
+                    },
+                    {
+                        "command": "--invokable",
+                        "needs_value": false,
+                        "description": "Create an invokable controller with a single __invoke method."
+                    }
+                ]
+            },
+            {
+                "name": "make:model",
+                "description": "Generate a new Eloquent model class.",
+                "suffix": "",
+                "needs_value": true,
+                "flags": [
+                    {
+                        "command": "--migration",
+                        "needs_value": false,
+                        "description": "Create an accompanying migration file."
+                    },
+                    {
+                        "command": "--controller",
+                        "needs_value": false,
+                        "description": "Create an accompanying controller for the model."
+                    },
+                    {
+                        "command": "--factory",
+                        "needs_value": false,
+                        "description": "Create an accompanying factory for the model."
+                    },
+                    {
+                        "command": "--seed",
+                        "needs_value": false,
+                        "description": "Create an accompanying seeder for the model."
+                    },
+                    {
+                        "command": "--pivot",
+                        "needs_value": false,
+                        "description": "Indicate that the generated model is a pivot table."
+                    },
+                    {
+                        "command": "--all",
+                        "needs_value": false,
+                        "description": "Create migration, factory, seeder, and controller together."
+                    },
+                    {
+                        "command": "-m",
+                        "needs_value": false,
+                        "description": "Shorthand for --migration."
+                    },
+                    {
+                        "command": "-c",
+                        "needs_value": false,
+                        "description": "Shorthand for --controller."
+                    },
+                    {
+                        "command": "-f",
+                        "needs_value": false,
+                        "description": "Shorthand for --factory."
+                    },
+                    {
+                        "command": "-s",
+                        "needs_value": false,
+                        "description": "Shorthand for --seed."
+                    },
+                    {
+                        "command": "-mc",
+                        "needs_value": false,
+                        "description": "Shorthand for creating migration and controller."
+                    },
+                    {
+                        "command": "-mcf",
+                        "needs_value": false,
+                        "description": "Shorthand for creating migration, controller, and factory."
+                    },
+                    {
+                        "command": "-mcs",
+                        "needs_value": false,
+                        "description": "Shorthand for creating migration, controller, and seeder."
+                    }
+                ]
+            },
+            {
+                "name": "make:migration",
+                "description": "Generate a new database migration file.",
+                "suffix": "Migration",
+                "needs_value": true,
+                "flags": [
+                    {
+                        "command": "--create",
+                        "needs_value": true,
+                        "description": "Name of the table to be created."
+                    },
+                    {
+                        "command": "--table",
+                        "needs_value": true,
+                        "description": "Name of the table to be migrated."
+                    },
+                    {
+                        "command": "--path",
+                        "needs_value": true,
+                        "description": "File path for the migration."
+                    },
+                    {
+                        "command": "-c",
+                        "needs_value": true,
+                        "description": "Shorthand for --create."
+                    },
+                    {
+                        "command": "-t",
+                        "needs_value": true,
+                        "description": "Shorthand for --table."
+                    }
+                ]
+            },
+            {
+                "name": "make:seeder",
+                "description": "Generate a new database seeder.",
+                "suffix": "Seeder",
+                "needs_value": true,
+                "flags": [
+                    {
+                        "command": "-s",
+                        "needs_value": false,
+                        "description": "Shorthand for running this seeder after creation."
+                    }
+                ]
+            },
+            {
+                "name": "make:middleware",
+                "description": "Generate a new middleware class.",
+                "suffix": "Middleware",
+                "needs_value": true,
+                "flags": []
+            },
+            {
+                "name": "make:request",
+                "description": "Generate a new form request class.",
+                "suffix": "Request",
+                "needs_value": true,
+                "flags": []
+            },
+            {
+                "name": "make:command",
+                "description": "Generate a new Artisan command.",
+                "suffix": "Command",
+                "needs_value": true,
+                "flags": [
+                    {
+                        "command": "--command",
+                        "needs_value": true,
+                        "description": "Name of the terminal command."
+                    },
+                    {
+                        "command": "-c",
+                        "needs_value": true,
+                        "description": "Shorthand for --command."
+                    }
+                ]
+            },
+            {
+                "name": "make:policy",
+                "description": "Generate a new policy class.",
+                "suffix": "Policy",
+                "needs_value": true,
+                "flags": [
+                    {
+                        "command": "--model",
+                        "needs_value": true,
+                        "description": "Name of the model associated with this policy."
+                    },
+                    {
+                        "command": "-m",
+                        "needs_value": true,
+                        "description": "Shorthand for --model."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "migrate",
+        "commands": [
+            {
+                "name": "migrate",
+                "description": "Run the database migrations.",
+                "suffix": null,
+                "needs_value": false,
+                "flags": [
+                    {
+                        "command": "--database",
+                        "needs_value": true,
+                        "description": "The database connection to use."
+                    },
+                    {
+                        "command": "--force",
+                        "needs_value": false,
+                        "description": "Force the operation to run without a confirmation prompt."
+                    },
+                    {
+                        "command": "--path",
+                        "needs_value": true,
+                        "description": "Path to specific migration files."
+                    },
+                    {
+                        "command": "--realpath",
+                        "needs_value": false,
+                        "description": "Indicate that the migration file path is relative to the root directory."
+                    },
+                    {
+                        "command": "--seed",
+                        "needs_value": false,
+                        "description": "Run the seeders after migration."
+                    },
+                    {
+                        "command": "--step",
+                        "needs_value": false,
+                        "description": "Force the migrations to be run so they can be rolled back individually."
+                    },
+                    {
+                        "command": "-f",
+                        "needs_value": false,
+                        "description": "Shorthand for --force."
+                    },
+                    {
+                        "command": "-s",
+                        "needs_value": false,
+                        "description": "Shorthand for --seed."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "db",
+        "commands": [
+            {
+                "name": "db:seed",
+                "description": "Seed the database with records.",
+                "needs_value": false,
+                "flags": [
+                    {
+                        "command": "--class",
+                        "needs_value": true,
+                        "description": "Specify the seeder class to run."
+                    },
+                    {
+                        "command": "-c",
+                        "needs_value": true,
+                        "description": "Shorthand for --class."
+                    },
+                    {
+                        "command": "--force",
+                        "needs_value": false,
+                        "description": "Run the seeders without a confirmation prompt in production."
+                    },
+                    {
+                        "command": "-f",
+                        "needs_value": false,
+                        "description": "Shorthand for --force."
+                    }
+                ]
+            },
+            {
+                "name": "db:wipe",
+                "description": "Drop all tables, views, and types, and re-run migrations.",
+                "needs_value": false,
+                "flags": [
+                    {
+                        "command": "--database",
+                        "needs_value": true,
+                        "description": "Specify the database connection to use."
+                    },
+                    {
+                        "command": "--force",
+                        "needs_value": false,
+                        "description": "Run the operation without a confirmation prompt."
+                    },
+                    {
+                        "command": "-f",
+                        "needs_value": false,
+                        "description": "Shorthand for --force."
+                    }
+                ]
+            }
+        ]
+    }
+]
